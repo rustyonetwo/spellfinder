@@ -1,0 +1,105 @@
+defmodule Spellfinder.Repo.Migrations.CreateRawSpells do
+  use Ecto.Migration
+
+  def up do
+    create table("raw_spells") do
+      add :name, :string, null: false
+      add :school, :string
+      add :subschool, :string
+      add :descriptor, :string
+      add :spell_level, :string
+      add :casting_time, :string
+      add :components, :string
+      add :costly_components, :boolean
+      add :range, :string
+      add :area, :string
+      add :effect, :string
+      add :targets, :string
+      add :duration, :string
+      add :dismissible, :boolean
+      add :shapeable, :boolean
+      add :saving_throw, :boolean
+      add :spell_resistance, :string
+      add :description, :text
+      add :description_formatted, :text
+      add :source, :string
+      add :full_text, :text
+      add :verbal, :boolean
+      add :somatic, :boolean
+      add :material, :boolean
+      add :focus, :boolean
+      add :divine_focus, :boolean
+      add :sor, :integer
+      add :wiz, :integer
+      add :cleric, :integer
+      add :druid, :integer
+      add :ranger, :integer
+      add :bard, :integer
+      add :paladin, :integer
+      add :alchemist, :integer
+      add :summoner, :integer
+      add :witch, :integer
+      add :inquisitor, :integer
+      add :oracle, :integer
+      add :antipaladin, :integer
+      add :magus, :integer
+      add :adept, :integer
+      add :deity, :integer
+      add :SLA_Level, :string
+      add :domain, :string
+      add :short_description, :text
+      add :acid, :boolean
+      add :air, :boolean
+      add :chaotic, :boolean
+      add :cold, :boolean
+      add :curse, :boolean
+      add :darkness, :boolean
+      add :death, :boolean
+      add :disease, :boolean
+      add :earth, :boolean
+      add :electricity, :boolean
+      add :emotion, :boolean
+      add :evil, :boolean
+      add :fear, :boolean
+      add :fire, :boolean
+      add :force, :boolean
+      add :good, :boolean
+      add :language_dependent, :boolean
+      add :lawful, :boolean
+      add :light, :boolean
+      add :mind_affecting, :boolean
+      add :pain, :boolean
+      add :poison, :boolean
+      add :shadow, :boolean
+      add :sonic, :boolean
+      add :water, :boolean
+      add :linktext, :string
+      add :raw_id, :integer
+      add :material_costs, :integer
+      add :bloodline, :string
+      add :patron, :string
+      add :mythic_text, :text
+      add :augmented, :string
+      add :mythic, :boolean
+      add :bloodrager, :integer
+      add :shaman, :integer
+      add :psychic, :integer
+      add :medium, :integer
+      add :mesmerist, :integer
+      add :occultist, :integer
+      add :spiritualist, :integer
+      add :skald, :integer
+      add :investigator, :integer
+      add :hunter, :integer
+      add :haunt_statistics, :string
+      add :ruse, :boolean
+      add :draconic, :boolean
+      add :meditative, :boolean
+      add :summoner_unchained, :integer
+    end
+  end
+
+  def down do
+    drop table("raw_spells")
+  end
+end

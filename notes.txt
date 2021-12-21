@@ -1,0 +1,13 @@
+This project targets either a raspberry pi or a small cloud surface, so both compute and storage should be limited. 
+Only keep the most recent original file, and try to limit file I/O activity.
+
+Ingest the raw spell data into a flat table so that optimizations and changes can trickle up from there
+- Migration to create table
+- Create schema
+- Create worker to ingest file
+- Run ingestion script
+- Job to check for updated table once a month?
+
+Normalize database
+- Using the raw spell data table, create new tables that represent a properly normalized structure
+- Use workers again to read the raw table and 
